@@ -1,8 +1,8 @@
 ## Installation and Upgrading
 You'll need to install [Composer](https://getcomposer.org/) first.
 
-- Install with `composer require learninglocker/moodle-log-expander`.
-- Update with `composer update learninglocker/moodle-log-expander`.
+- Install with `composer require learninglocker/moodle-xapi-translator`.
+- Update with `composer update learninglocker/moodle-xapi-translator`.
 
 
 ## Supported Events

@@ -6,7 +6,7 @@ You'll need to install [Composer](https://getcomposer.org/) first.
 
 
 ## Supported Events
-Mapping for moodle event names to expander event classes can be found in the [Controller](../src/Controller.php).
+Mapping for moodle event names to translator event classes can be found in the [Controller](../src/Controller.php).
 
 Moodle Event | Translator Event | Test
 --- | --- | ---

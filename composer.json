@@ -1,5 +1,5 @@
 {
-    "name": "learninglocker/moodle-log-expander",
+    "name": "learninglocker/moodle-xapi-translator",
     "autoload": {
         "psr-4": {
           "MXTranslator\\": "src/",

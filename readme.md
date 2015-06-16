@@ -9,5 +9,5 @@
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/LearningLocker/learninglocker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
-- [Read documentation](https://github.com/LearningLocker/Moodle-xAPI-Translator/blob/master/docs).
+- [Read documentation](https://github.com/LearningLocker/Moodle-xAPI-Translator/blob/master/docs/readme.md).
 - [Report bugs, enhancements, and questions](https://github.com/LearningLocker/Moodle-xAPI-Translator/blob/master/contributing.md#issue-templates).

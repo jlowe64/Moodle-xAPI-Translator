@@ -1,5 +1,5 @@
 # [Moodle to xAPI Translator](https://github.com/LearningLocker/Moodle-xAPI-Translator)
-> Translates events from the [Moodle](https://moodle.org/) Logstore to xAPI recipe options.
+> Translates [expanded events from the Moodle Logstore](https://github.com/LearningLocker/Moodle-Log-Expander) to xAPI recipe options.
 
 [![Build Status](https://travis-ci.org/LearningLocker/Moodle-xAPI-Translator.svg?branch=master)](https://travis-ci.org/LearningLocker/Moodle-xAPI-Translator)
 

@@ -1,6 +1,6 @@
 <?php namespace MXTranslator\Events;
 
-class AttemptReviewed extends AttemtStarted {
+class AttemptReviewed extends AttemptStarted {
     /**
      * Reads data for an event.
      * @param [String => Mixed] $opts

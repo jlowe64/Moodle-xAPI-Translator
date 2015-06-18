@@ -16,6 +16,7 @@ Moodle Event | Translator Event | Test
 \mod_url\event\course_module_viewed | [ModuleViewed](../src/Events/ModuleViewed.php) | [ModuleViewedTest](../tests/ModuleViewedTest.php)
 \mod_folder\event\course_module_viewed | [ModuleViewed](../src/Events/ModuleViewed.php) | [ModuleViewedTest](../tests/ModuleViewedTest.php)
 \mod_book\event\course_module_viewed | [ModuleViewed](../src/Events/ModuleViewed.php) | [ModuleViewedTest](../tests/ModuleViewedTest.php)
+\mod_scorm\event\course_module_viewed | [ModuleViewed](../src/Events/ModuleViewed.php) | [ModuleViewedTest](../tests/ModuleViewedTest.php)
 \mod_quiz\event\attempt_preview_started | [AttemptStarted](../src/Events/AttemptStarted.php) | [AttemptStartedTest](../tests/AttemptStartedTest.php)
 \mod_quiz\event\attempt_reviewed | [AttemptReviewed](../src/Events/AttemptReviewed.php) | [AttemptReviewedTest](../tests/AttemptReviewedTest.php)
 \core\event\user_loggedin | [UserLoggedin](../src/Events/UserLoggedin.php) | [UserLoggedinTest](../tests/UserLoggedinTest.php)

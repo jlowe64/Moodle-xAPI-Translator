@@ -5,13 +5,14 @@ class AttemptAbandoned extends AttemptStarted {
      * Reads data for an event.
      * @param [String => Mixed] $opts
      * @return [String => Mixed]
-     * @override AttemtAbandoned
+     * @override AttemptStarted
      */
     public function read(array $opts) {
         return array_merge(parent::read($opts), [
             'recipe' => 'attempt_completed',
+            'attempt_result' => (float) ($opts['attempt']->sumgrades ?: 0),
+            'attempt_completed' => $opts['attempt']->state === 'finished',
             'attempt_duration' => $duration,
-            'attempt_abandoned' => $opts['attempt']->state === 'abandoned',
         ]);
     }
 }

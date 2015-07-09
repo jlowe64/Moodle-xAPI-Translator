@@ -23,6 +23,7 @@ Moodle Event | Translator Event | Test | Example
 \core\event\user_loggedout | [UserLoggedout](../src/Events/UserLoggedout.php) | [UserLoggedoutTest](../tests/UserLoggedoutTest.php) | [UserLoggedout](examples/UserLoggedout.json)
 \mod_assign\event\submission_graded | [AssignmentGraded](../src/Events/AssignmentGraded.php) | [AssignmentGradedTest](../tests/AssignmentGradedTest.php) | [AssignmentGraded](examples/AssignmentGraded.json)
 \mod_assign\event\assessable_submitted | [AssignmentSubmitted](../src/Events/AssignmentSubmitted.php) | [AssignmentSubmittedTest](../tests/AssignmentSubmittedTest.php) | [AssignmentSubmitted](examples/AssignmentSubmitted.json)
+\mod_forum\event\discussion_viewed | [DiscussionViewed](../src/Events/ModuleViewed.php) | [DiscussionViewedTest](../tests/ModuleViewedTest.php) | [DiscussionViewed](examples/DiscussionViewed.json)
 
 
 ## Adding Events

@@ -11,6 +11,10 @@ class DiscussionViewed extends ModuleViewed {
         return array_merge(parent::read($opts), [
             'recipe' => 'discussion_viewed',
             'discussion_url' => $opts['discussion']->url,
+            'discussion_name' => $opts['discussion']->name,
+            'discussion_description' => $opts['module']->intro,
+            'discussion_ext' => $opts['discussion'],
+            'discussion_ext_key' => 'http://lrs.learninglocker.net/define/extensions/moodle_discussion',
         ]);
     }
 }

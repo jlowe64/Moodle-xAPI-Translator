@@ -39,7 +39,7 @@ class DiscussionViewedTest extends EventTest {
 
     protected function assertOutput($input, $output) {
         parent::assertOutput($input, $output);
-        $this->assertModule($input['module'], $output, 'discussion');
+        $this->assertModule($input['discussion'], $output, 'discussion');
     }
 
     protected function assertModule($input, $output, $type) {

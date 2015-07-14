@@ -46,7 +46,7 @@ class DiscussionViewedTest extends EventTest {
         $ext_key = 'http://lrs.learninglocker.net/define/extensions/moodle_discussion';
         $this->assertEquals($input->url, $output[$type.'_url']);
         $this->assertEquals($input->name, $output[$type.'_name']);
-        $this->assertEquals($input->intro, $output[$type.'_description']);
+        $this->assertEquals($input->description, $output[$type.'_description']);
         $this->assertEquals($input, $output[$type.'_ext']);
         $this->assertEquals($ext_key, $output[$type.'_ext_key']);
     }

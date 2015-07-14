@@ -25,7 +25,6 @@ abstract class EventTest extends PhpUnitTestCase {
      */
     public function testRead() {
         $input = $this->constructInput();
-        print_r($input,true);
         $output = $this->event->read($input);
         $this->assertOutput($input, $output);
     }

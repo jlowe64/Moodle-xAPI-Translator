@@ -29,11 +29,11 @@ class DiscussionViewedTest extends EventTest {
     
     private function constructDiscussion() {
         return (object) [
-            'discussion_url' => 'http://www.example.com/module_url',
-            'discussion_name' => 'Test discussion_name',
-            'discussion_description' => 'Test discussion_intro',
-            'discussion_ext' => 'discussion_ext',
-            'discussion_ext_key' => 'http://lrs.learninglocker.net/define/extensions/moodle_discussion',
+            'url' => 'http://www.example.com/discussion_url',
+            'name' => 'Test discussion_name',
+            'description' => 'Test discussion_intro',
+            'ext' => 'discussion_ext',
+            'ext_key' => 'http://lrs.learninglocker.net/define/extensions/moodle_discussion',
         ];
     }
 

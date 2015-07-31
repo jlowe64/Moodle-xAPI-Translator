@@ -18,6 +18,11 @@ class Event extends PhpObj {
             'context_ext' => $opts['event'],
             'context_ext_key' => 'http://lrs.learninglocker.net/define/extensions/moodle_logstore_standard_log',
             'time' => date('c', $opts['event']['timecreated']),
+            'app_url' => $opts['app']->url,
+            'app_name' => $opts['app']->fullname ?: 'A Moodle course',
+            'app_description' => $opts['app']->summary ?: 'A Moodle course',
+            'app_ext' => $opts['app'],
+            'app_ext_key' => 'http://lrs.learninglocker.net/define/extensions/moodle_course',
         ];
     }
 }

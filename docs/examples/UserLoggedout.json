@@ -32,6 +32,7 @@
     "app_url": "http:\/\/localhost\/moodle\/course.php?id=1",
     "app_name": "My Test Site",
     "app_description": "<p>A test site.<\/p>",
+    "app_type": "mod_course",
     "app_ext": {
         "id": "1",
         "category": "0",
@@ -63,7 +64,8 @@
         "enablecompletion": "0",
         "completionnotify": "0",
         "cacherev": "1434624170",
-        "url": "http:\/\/localhost\/moodle\/course.php?id=1"
+        "url": "http:\/\/localhost\/moodle\/course.php?id=1",
+        "type": "mod_course"
     },
     "app_ext_key": "http:\/\/lrs.learninglocker.net\/define\/extensions\/moodle_course"
 }

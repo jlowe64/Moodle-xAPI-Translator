@@ -11,9 +11,4 @@ class UserLoggedoutTest extends EventTest {
     public function setup() {
         $this->event = new Event($this->repo);
     }
-
-    protected function assertOutput($input, $output) {
-        parent::assertOutput($input, $output);
-        $this->assertCourse($input['course'], $output, 'app');
-    }
 }

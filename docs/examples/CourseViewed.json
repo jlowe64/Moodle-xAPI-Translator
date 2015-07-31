@@ -32,6 +32,7 @@
     "course_url": "http:\/\/localhost\/moodle\/course.php?id=2",
     "course_name": "My Test Course 1",
     "course_description": "<p>A test course.<\/p>",
+    "course_type": "mod_course",
     "course_ext": {
         "id": "2",
         "category": "1",
@@ -63,12 +64,14 @@
         "enablecompletion": "0",
         "completionnotify": "0",
         "cacherev": "1434624170",
-        "url": "http:\/\/localhost\/moodle\/course.php?id=2"
+        "url": "http:\/\/localhost\/moodle\/course.php?id=2",
+        "type": "mod_course"
     },
     "course_ext_key": "http:\/\/lrs.learninglocker.net\/define\/extensions\/moodle_course",
     "app_url": "http:\/\/localhost\/moodle\/course.php?id=1",
     "app_name": "My Test Site",
     "app_description": "<p>A test site.<\/p>",
+    "app_type": "mod_course",
     "app_ext": {
         "id": "1",
         "category": "0",
@@ -100,7 +103,8 @@
         "enablecompletion": "0",
         "completionnotify": "0",
         "cacherev": "1434624170",
-        "url": "http:\/\/localhost\/moodle\/course.php?id=1"
+        "url": "http:\/\/localhost\/moodle\/course.php?id=1",
+        "type": "mod_course"
     },
     "app_ext_key": "http:\/\/lrs.learninglocker.net\/define\/extensions\/moodle_course"
 }

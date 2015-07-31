@@ -3,6 +3,8 @@ use \MXTranslator\Repository as Repository;
 use \stdClass as PhpObj;
 
 class Event extends PhpObj {
+    protected static $xapi_type = 'http://lrs.learninglocker.net/define/type/moodle/';
+
     /**
      * Reads data for an event.
      * @param [String => Mixed] $opts
@@ -21,6 +23,7 @@ class Event extends PhpObj {
             'app_url' => $opts['app']->url,
             'app_name' => $opts['app']->fullname ?: 'A Moodle course',
             'app_description' => $opts['app']->summary ?: 'A Moodle course',
+            'app_type' => static::$xapi_type.$opts['app']->type,
             'app_ext' => $opts['app'],
             'app_ext_key' => 'http://lrs.learninglocker.net/define/extensions/moodle_course',
         ];

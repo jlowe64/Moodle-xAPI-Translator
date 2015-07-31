@@ -22,6 +22,7 @@ class DiscussionViewedTest extends ModuleViewedTest {
         return (object) [
             'url' => 'http://www.example.com/discussion_url',
             'name' => 'Test discussion_name',
+            'type' => 'moodle_discussion',
             'ext' => 'discussion_ext',
             'ext_key' => 'http://lrs.learninglocker.net/define/extensions/moodle_discussion',
         ];
@@ -37,6 +38,7 @@ class DiscussionViewedTest extends ModuleViewedTest {
         $this->assertEquals($input->url, $output[$type.'_url']);
         $this->assertEquals($input->name, $output[$type.'_name']);
         $this->assertEquals('A Moodle discussion.', $output[$type.'_description']);
+        $this->assertEquals(static::$xapi_type.$input->type, $output[$type.'_type']);
         $this->assertEquals($input, $output[$type.'_ext']);
         $this->assertEquals($ext_key, $output[$type.'_ext_key']);
     }

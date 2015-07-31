@@ -32,6 +32,7 @@
     "course_url": "http:\/\/localhost\/moodle\/course.php?id=2",
     "course_name": "My Test Course 1",
     "course_description": "<p>A test course.<\/p>",
+    "course_type": "mod_course",
     "course_ext": {
         "id": "2",
         "category": "1",
@@ -63,12 +64,14 @@
         "enablecompletion": "0",
         "completionnotify": "0",
         "cacherev": "1434624170",
-        "url": "http:\/\/localhost\/moodle\/course.php?id=2"
+        "url": "http:\/\/localhost\/moodle\/course.php?id=2",
+        "type": "mod_course"
     },
     "course_ext_key": "http:\/\/lrs.learninglocker.net\/define\/extensions\/moodle_course",
     "module_url": "http:\/\/localhost\/moodle\/mod\/quiz\/view.php?id=3",
     "module_name": "My Test Quiz 1",
     "module_description": "A module",
+    "module_type": "mod_quiz",
     "module_ext": {
         "id": "1",
         "course": "2",
@@ -110,7 +113,8 @@
         "showblocks": "0",
         "completionattemptsexhausted": "0",
         "completionpass": "0",
-        "url": "http:\/\/localhost\/moodle\/mod\/quiz\/view.php?id=3"
+        "url": "http:\/\/localhost\/moodle\/mod\/quiz\/view.php?id=3",
+        "type": "mod_quiz"
     },
     "module_ext_key": "http:\/\/lrs.learninglocker.net\/define\/extensions\/moodle_module",
     "attempt_url": "http:\/\/localhost\/moodle\/mod\/quiz\/attempt.php?attempt=52",
@@ -130,7 +134,8 @@
         "timecheckstate": null,
         "sumgrades": "1.00000",
         "url": "http:\/\/localhost\/moodle\/mod\/quiz\/attempt.php?attempt=52",
-        "name": "Attempt 52"
+        "name": "Attempt 52",
+        "type": "mod_attempt"
     },
     "attempt_ext_key": "http:\/\/lrs.learninglocker.net\/define\/extensions\/moodle_attempt",
     "attempt_name": "Attempt 52",
@@ -140,6 +145,7 @@
     "app_url": "http:\/\/localhost\/moodle\/course.php?id=1",
     "app_name": "My Test Site",
     "app_description": "<p>A test site.<\/p>",
+    "app_type": "mod_course",
     "app_ext": {
         "id": "1",
         "category": "0",
@@ -171,7 +177,8 @@
         "enablecompletion": "0",
         "completionnotify": "0",
         "cacherev": "1434624170",
-        "url": "http:\/\/localhost\/moodle\/course.php?id=1"
+        "url": "http:\/\/localhost\/moodle\/course.php?id=1",
+        "type": "mod_course"
     },
     "app_ext_key": "http:\/\/lrs.learninglocker.net\/define\/extensions\/moodle_course"
 }

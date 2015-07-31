@@ -11,6 +11,7 @@ class AttemptStarted extends ModuleViewed {
         return array_merge(parent::read($opts), [
             'recipe' => 'attempt_started',
             'attempt_url' => $opts['attempt']->url,
+            'attempt_type' => static::$xapi_type.$opts['attempt']->type,
             'attempt_ext' => $opts['attempt'],
             'attempt_ext_key' => 'http://lrs.learninglocker.net/define/extensions/moodle_attempt',
             'attempt_name' => $opts['attempt']->name,

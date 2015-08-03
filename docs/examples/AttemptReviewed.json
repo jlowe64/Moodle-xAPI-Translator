@@ -4,6 +4,11 @@
     "user_name": "testuser",
     "context_lang": "",
     "context_platform": "Moodle",
+    "context_info": {
+        "https://moodle.org/": "1.0.0",
+        "https://github.com/LearningLocker/Moodle-Log-Expander": "1.0.0",
+        "https://github.com/LearningLocker/Moodle-xAPI-Translator": "1.0.0"
+    },
     "context_ext": {
         "eventname": "\\mod_quiz\\event\\attempt_reviewed",
         "component": "mod_quiz",

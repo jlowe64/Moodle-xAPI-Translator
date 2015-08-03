@@ -11,6 +11,7 @@ class Event extends PhpObj {
      * @return [String => Mixed]
      */
     public function read(array $opts) {
+        $opts['info']->{'https://github.com/LearningLocker/Moodle-xAPI-Translator'} = file_get_contents(__DIR__.'/../../VERSION');
         return [
             'user_id' => $opts['user']->id,
             'user_url' => $opts['user']->url,
@@ -19,6 +20,7 @@ class Event extends PhpObj {
             'context_platform' => 'Moodle',
             'context_ext' => $opts['event'],
             'context_ext_key' => 'http://lrs.learninglocker.net/define/extensions/moodle_logstore_standard_log',
+            'context_info' => $opts['info'],
             'time' => date('c', $opts['event']['timecreated']),
             'app_url' => $opts['app']->url,
             'app_name' => $opts['app']->fullname ?: 'A Moodle course',

@@ -99,6 +99,7 @@ abstract class EventTest extends PhpUnitTestCase {
     }
 
     private function assertInfo($input, $output) {
+        $version = str_replace("\r\n", "", file_get_contents(__DIR__.'/../VERSION'));
         $this->assertEquals(
             $input->{'https://moodle.org/'},
             $output->{'https://moodle.org/'}
@@ -108,7 +109,7 @@ abstract class EventTest extends PhpUnitTestCase {
             $output->{'https://github.com/LearningLocker/Moodle-Log-Expander'}
         );
         $this->assertEquals(
-            file_get_contents(__DIR__.'/../VERSION'),
+            $version,
             $output->{'https://github.com/LearningLocker/Moodle-xAPI-Translator'}
         );
     }

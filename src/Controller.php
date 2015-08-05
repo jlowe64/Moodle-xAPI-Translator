@@ -23,6 +23,7 @@ class Controller extends PhpObj {
         '\core\event\user_loggedout' => 'UserLoggedout',
         '\mod_assign\event\submission_graded' => 'AssignmentGraded',
         '\mod_assign\event\assessable_submitted' => 'AssignmentSubmitted',
+        '\core\event\user_enrolment_created' => 'EnrolmentCreated',
     ];
 
     /**

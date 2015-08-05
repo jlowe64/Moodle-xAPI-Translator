@@ -29,6 +29,7 @@ Moodle Event | Translator Event | Test | Example
 \mod_forum\event\discussion_viewed | [DiscussionViewed](../src/Events/DiscussionViewed.php) | [DiscussionViewedTest](../tests/DiscussionViewedTest.php) | [DiscussionViewed](examples/DiscussionViewed.json)
 \mod_quiz\event\attempt_abandoned | [AttemptAbandoned](../src/Events/AttemptAbandoned.php) | [AttemptAbandonedTest](../tests/AttemptAbandonedTest.php) | [AttemptAbandoned](examples/AttemptAbandoned.json)
 \mod_forum\event\user_report_viewed | [ModuleViewed](../src/Events/ModuleViewed.php) | [ModuleViewedTest](../tests/ModuleViewedTest.php) | [ModuleViewed](examples/ModuleViewed.json)
+\core\event\user_enrolment_created | [EnrolmentCreated](../src/Events/EnrolmentCreated.php) | [EnrolmentCreatedTest](../tests/EnrolmentCreatedTest.php) | [EnrolmentCreated](examples/EnrolmentCreated.json)
 
 
 ## Adding Events

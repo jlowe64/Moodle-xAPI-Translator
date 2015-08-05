@@ -24,6 +24,7 @@ class Controller extends PhpObj {
         '\mod_assign\event\submission_graded' => 'AssignmentGraded',
         '\mod_assign\event\assessable_submitted' => 'AssignmentSubmitted',
         '\core\event\user_created' => 'UserRegistered',
+        '\core\event\user_enrolment_created' => 'EnrolmentCreated',
     ];
 
     /**

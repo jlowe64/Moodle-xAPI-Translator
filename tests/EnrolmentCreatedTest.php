@@ -16,5 +16,6 @@ class EnrolmentCreatedTest extends EventTest {
         parent::assertOutput($input, $output);
         $this->assertUser($input['user'], $output, 'instructor');
         $this->assertUser($input['relateduser'], $output, 'user');
+        $this->assertCourse($input['course'], $output, 'course');
     }
 }

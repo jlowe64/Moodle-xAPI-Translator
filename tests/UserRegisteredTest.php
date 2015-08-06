@@ -15,5 +15,6 @@ class UserRegisteredTest extends EventTest {
     protected function assertOutput($input, $output) {
         parent::assertOutput($input, $output);
         $this->assertUser($input['relateduser'], $output, 'user');
+        $this->assertCourse($input['course'], $output, 'course');
     }
 }

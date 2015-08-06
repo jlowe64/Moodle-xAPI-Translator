@@ -1,4 +1,4 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \MXTranslator\Events\DiscussionViewed as Event;
 
 class DiscussionViewedTest extends ModuleViewedTest {

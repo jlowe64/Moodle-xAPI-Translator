@@ -1,4 +1,4 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \MXTranslator\Events\UserLoggedin as Event;
 
 class UserLoggedinTest extends UserEventTest {

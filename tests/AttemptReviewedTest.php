@@ -1,4 +1,4 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \MXTranslator\Events\AttemptReviewed as Event;
 
 class AttemptReviewedTest extends AttemptStartedTest {

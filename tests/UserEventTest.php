@@ -1,4 +1,4 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \MXTranslator\Events\Event as Event;
 
 abstract class UserEventTest extends EventTest {

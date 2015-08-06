@@ -1,4 +1,4 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \PHPUnit_Framework_TestCase as PhpUnitTestCase;
 use \MXTranslator\Events\Event as Event;
 

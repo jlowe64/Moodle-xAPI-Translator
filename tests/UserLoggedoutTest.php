@@ -1,4 +1,4 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \MXTranslator\Events\UserLoggedout as Event;
 
 class UserLoggedoutTest extends UserEventTest {

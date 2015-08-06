@@ -11,4 +11,10 @@ class EnrolmentCreatedTest extends CourseViewedTest {
     public function setup() {
         $this->event = new Event($this->repo);
     }
+
+    protected function assertOutput($input, $output) {
+        parent::assertOutput($input, $output);
+        $this->assertUser($input['user'], $output, 'instructor');
+        $this->assertUser($input['relateduser'], $output, 'user');
+    }
 }

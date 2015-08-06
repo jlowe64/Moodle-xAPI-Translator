@@ -2,6 +2,9 @@
     "user_id": "2",
     "user_url": "http:\/\/localhost\/moodle",
     "user_name": "testuser",
+    "instructor_id": "2",
+    "instructor_url": "http:\/\/localhost\/moodle",
+    "instructor_name": "testuser",
     "context_lang": "",
     "context_platform": "Moodle",
     "context_info": {

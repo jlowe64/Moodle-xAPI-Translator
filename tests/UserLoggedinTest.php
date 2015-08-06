@@ -1,7 +1,7 @@
 <?php namespace Tests;
 use \MXTranslator\Events\UserLoggedin as Event;
 
-class UserLoggedinTest extends EventTest {
+class UserLoggedinTest extends UserEventTest {
     protected static $recipe_name = 'user_loggedin';
     
     /**

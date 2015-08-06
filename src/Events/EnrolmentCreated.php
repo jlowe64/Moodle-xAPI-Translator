@@ -1,11 +1,11 @@
 <?php namespace MXTranslator\Events;
 
-class EnrolmentCreated extends Event {
+class EnrolmentCreated extends CourseViewed {
     /**
      * Reads data for an event.
      * @param [String => Mixed] $opts
      * @return [String => Mixed]
-     * @override Event
+     * @override CourseViewed
      */
     public function read(array $opts) {
         return array_merge(parent::read($opts), [

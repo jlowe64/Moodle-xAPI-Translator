@@ -12,14 +12,9 @@ class EnrolmentCreatedTest extends EventTest {
         $this->event = new Event($this->repo);
     }
 
-    protected function constructInput() {
-        return array_merge(parent::constructInput(), [
-            'instructor' => $this->constructUser(),
-        ]);
-    }
-
     protected function assertOutput($input, $output) {
         parent::assertOutput($input, $output);
-        $this->assertUser($input['instructor'], $output, 'instructor');
+        $this->assertUser($input['user'], $output, 'instructor');
+        $this->assertUser($input['relateduser'], $output, 'user');
     }
 }

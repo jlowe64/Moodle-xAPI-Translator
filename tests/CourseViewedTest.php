@@ -1,7 +1,7 @@
 <?php namespace Tests;
 use \MXTranslator\Events\CourseViewed as Event;
 
-class CourseViewedTest extends EventTest {
+class CourseViewedTest extends UserEventTest {
     protected static $recipe_name = 'course_viewed';
     
     /**

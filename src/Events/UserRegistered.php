@@ -10,6 +10,9 @@ class UserRegistered extends Event {
     public function read(array $opts) {
         return array_merge(parent::read($opts), [
             'recipe' => 'user_registered',
+            'user_id' => $opts['relateduser']->id,
+            'user_url' => $opts['relateduser']->url,
+            'user_name' => $opts['relateduser']->username,
         ]);
     }
 }

@@ -26,6 +26,7 @@ abstract class EventTest extends PhpUnitTestCase {
     protected function constructInput() {
         return [
             'user' => $this->constructUser(),
+            'relateduser' => $this->constructUser(),
             'course' => $this->constructCourse(),
             'app' => $this->constructCourse(),
             'event' => $this->constructEvent('\core\event\course_viewed'),
@@ -66,7 +67,6 @@ abstract class EventTest extends PhpUnitTestCase {
     }
 
     protected function assertOutput($input, $output) {
-        $this->assertUser($input['user'], $output, 'user');
         $this->assertCourse($input['app'], $output, 'app');
         $this->assertEvent($input['event'], $output);
         $this->assertEquals(static::$recipe_name, $output['recipe']);

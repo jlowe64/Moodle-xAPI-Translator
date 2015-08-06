@@ -10,9 +10,12 @@ class EnrolmentCreated extends Event {
     public function read(array $opts) {
         return array_merge(parent::read($opts), [
             'recipe' => 'enrolment_created',
-            'instructor_id' => $opts['instructor']->id,
-            'instructor_url' => $opts['instructor']->url,
-            'instructor_name' => $opts['instructor']->username,
+            'user_id' => $opts['relateduser']->id,
+            'user_url' => $opts['relateduser']->url,
+            'user_name' => $opts['relateduser']->username,
+            'instructor_id' => $opts['user']->id,
+            'instructor_url' => $opts['user']->url,
+            'instructor_name' => $opts['user']->username,
         ]);
     }
 }

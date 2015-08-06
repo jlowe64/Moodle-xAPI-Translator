@@ -1,7 +1,7 @@
 <?php namespace Tests;
 use \MXTranslator\Events\EnrolmentCreated as Event;
 
-class EnrolmentCreatedTest extends EventTest {
+class EnrolmentCreatedTest extends CourseViewedTest {
     protected static $recipe_name = 'enrolment_created';
     
     /**

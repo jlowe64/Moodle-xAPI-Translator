@@ -1,4 +1,4 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \MXTranslator\Events\AssignmentSubmitted as Event;
 
 class AssignmentSubmittedTest extends ModuleViewedTest {

@@ -1,4 +1,4 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \MXTranslator\Events\EnrolmentCreated as Event;
 
 class EnrolmentCreatedTest extends EventTest {

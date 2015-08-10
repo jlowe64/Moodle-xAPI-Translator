@@ -33,7 +33,23 @@ Moodle Event | Translator Event | Test | Example
 \core\event\user_enrolment_created | [EnrolmentCreated](../src/Events/EnrolmentCreated.php) | [EnrolmentCreatedTest](../tests/EnrolmentCreatedTest.php) | [EnrolmentCreated](examples/EnrolmentCreated.json)
 
 ## Adding Events
-To add an event create a new file in the "src/Events/" directory. You can then use  [ModuleViewed](../src/Events/ModuleViewed.php) as an example of what you're new file should look like. You will also need to change the [src/Controller.php file](../src/Controller.php) to map the Moodle event to your new event. Once you're happy with what you've done you'll need to create a pull request so that everyone else can use your new event.
+1. Create a new ".php" file in the "tests" directory.
+2. Change the file from step 1 using the "tests/ModuleEventTest.php" file as an example.
+3. Run the tests you've created with "./vendor/bin/phpunit".
+4. You should see the tests fail.
+5. Create a new ".php" file in the "src/events" directory.
+6. Change the file from step 5 using the "src/Events/ModuleEvent.php" file as an example.
+7. Run the tests with "./vendor/bin/phpunit".
+8. You should see the tests pass if you've done everything correctly.
+9. You may wish to repeat steps 2-4 and/or steps 6-8 at this point.
+10. Change the "src/Controller.php" file to map the Moodle event to the file you created in step 5.
+11. Create a pull request so that everyone else can use your new event.
+
+When adding new events or modifying existing events, we recommend that you follow the [rules of TDD](http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd).
+
+1. You are not allowed to write any production code unless it is to make a failing unit test pass.
+1. You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.
+1. You are not allowed to write any more production code than is sufficient to pass the one failing unit test.
 
 ### First Pull Request
 If this is your first pull request, you need to follow the steps below.

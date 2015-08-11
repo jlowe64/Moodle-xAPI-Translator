@@ -44,6 +44,7 @@ Moodle Event | Translator Event | Test | Example
 \mod_forum\event\user_report_viewed | [ModuleViewed](../src/Events/ModuleViewed.php) | [ModuleViewedTest](../tests/ModuleViewedTest.php) | [ModuleViewed](examples/ModuleViewed.json)
 \core\event\user_created | [UserRegistered](../src/Events/UserRegistered.php) | [UserRegisteredTest](../tests/UserRegisteredTest.php) | [UserRegistered](examples/UserRegistered.json)
 \core\event\user_enrolment_created | [EnrolmentCreated](../src/Events/EnrolmentCreated.php) | [EnrolmentCreatedTest](../tests/EnrolmentCreatedTest.php) | [EnrolmentCreated](examples/EnrolmentCreated.json)
+\mod_scorm\event\sco_launched | [ScormLaunched](../src/Events/ScormLaunched.php) | [ScormLaunchedTest](../tests/ScormLaunchedTest.php) | [ScormLaunched](examples/ScormLaunched.json)
 
 ## Adding Events
 1. Create a new ".php" file in the "tests" directory.

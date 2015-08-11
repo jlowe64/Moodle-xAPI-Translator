@@ -38,6 +38,7 @@ class Controller extends PhpObj {
         '\mod_assign\event\assessable_submitted' => 'AssignmentSubmitted',
         '\core\event\user_created' => 'UserRegistered',
         '\core\event\user_enrolment_created' => 'EnrolmentCreated',
+        '\mod_scorm\event\sco_launched' => 'ScormLaunched',
     ];
 
     /**

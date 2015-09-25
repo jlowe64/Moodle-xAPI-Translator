@@ -1,4 +1,4 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \MXTranslator\Events\AttemptStarted as Event;
 
 class AttemptStartedTest extends ModuleViewedTest {
@@ -22,6 +22,7 @@ class AttemptStartedTest extends ModuleViewedTest {
         return (object) [
             'url' => 'http://www.example.com/attempt_url',
             'name' => 'Test attempt_name',
+            'type' => 'moodle_attempt',
             'timestart' => 1433946701,
             'timefinish' => 1433946701,
             'sumgrades' => 1,
@@ -38,6 +39,7 @@ class AttemptStartedTest extends ModuleViewedTest {
         $ext_key = 'http://lrs.learninglocker.net/define/extensions/moodle_attempt';
         $this->assertEquals($input->url, $output['attempt_url']);
         $this->assertEquals($input->name, $output['attempt_name']);
+        $this->assertEquals(static::$xapi_type.$input->type, $output['attempt_type']);
         $this->assertEquals($input, $output['attempt_ext']);
         $this->assertEquals($ext_key, $output['attempt_ext_key']);
     }

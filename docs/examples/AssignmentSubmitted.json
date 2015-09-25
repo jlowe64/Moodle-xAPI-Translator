@@ -4,6 +4,11 @@
     "user_name": "testuser",
     "context_lang": "",
     "context_platform": "Moodle",
+    "context_info": {
+        "https://moodle.org/": "1.0.0",
+        "https://github.com/LearningLocker/Moodle-Log-Expander": "1.0.0",
+        "https://github.com/LearningLocker/Moodle-xAPI-Translator": "1.0.0"
+    },
     "context_ext": {
         "eventname": "\\mod_assign\\event\\assessable_submitted",
         "component": "mod_assign",
@@ -32,6 +37,7 @@
     "course_url": "http:\/\/localhost\/moodle\/course.php?id=2",
     "course_name": "My Test Course 1",
     "course_description": "<p>A test course.<\/p>",
+    "course_type": "mod_course",
     "course_ext": {
         "id": "2",
         "category": "1",
@@ -63,12 +69,14 @@
         "enablecompletion": "0",
         "completionnotify": "0",
         "cacherev": "1434624897",
-        "url": "http:\/\/localhost\/moodle\/course.php?id=2"
+        "url": "http:\/\/localhost\/moodle\/course.php?id=2",
+        "type": "mod_course"
     },
     "course_ext_key": "http:\/\/lrs.learninglocker.net\/define\/extensions\/moodle_course",
     "module_url": "http:\/\/localhost\/moodle\/mod\/assign\/view.php?id=13",
     "module_name": "My Test Assignment 3",
     "module_description": "A module",
+    "module_type": "mod_assign",
     "module_ext": {
         "id": "6",
         "course": "2",
@@ -98,7 +106,47 @@
         "markingallocation": "0",
         "sendstudentnotifications": "1",
         "preventsubmissionnotingroup": "0",
-        "url": "http:\/\/localhost\/moodle\/mod\/assign\/view.php?id=13"
+        "url": "http:\/\/localhost\/moodle\/mod\/assign\/view.php?id=13",
+        "type": "mod_assign"
     },
-    "module_ext_key": "http:\/\/lrs.learninglocker.net\/define\/extensions\/moodle_module"
+    "module_ext_key": "http:\/\/lrs.learninglocker.net\/define\/extensions\/moodle_module",
+    "app_url": "http:\/\/localhost\/moodle\/course.php?id=1",
+    "app_name": "My Test Site",
+    "app_description": "<p>A test site.<\/p>",
+    "app_type": "mod_course",
+    "app_ext": {
+        "id": "1",
+        "category": "0",
+        "sortorder": "10002",
+        "fullname": "My Test Site",
+        "shortname": "MTC1",
+        "idnumber": "MTC1",
+        "summary": "<p>A test site.<\/p>",
+        "summaryformat": "1",
+        "format": "weeks",
+        "showgrades": "1",
+        "newsitems": "5",
+        "startdate": "1433890800",
+        "marker": "0",
+        "maxbytes": "0",
+        "legacyfiles": "0",
+        "showreports": "0",
+        "visible": "1",
+        "visibleold": "1",
+        "groupmode": "0",
+        "groupmodeforce": "0",
+        "defaultgroupingid": "0",
+        "lang": "",
+        "calendartype": "",
+        "theme": "",
+        "timecreated": "1433844784",
+        "timemodified": "1433844784",
+        "requested": "0",
+        "enablecompletion": "0",
+        "completionnotify": "0",
+        "cacherev": "1434624170",
+        "url": "http:\/\/localhost\/moodle\/course.php?id=1",
+        "type": "mod_course"
+    },
+    "app_ext_key": "http:\/\/lrs.learninglocker.net\/define\/extensions\/moodle_course"
 }

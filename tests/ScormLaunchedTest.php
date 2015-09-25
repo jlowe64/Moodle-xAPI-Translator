@@ -1,9 +1,9 @@
 <?php namespace MXTranslator\Tests;
-use \MXTranslator\Events\UserLoggedout as Event;
+use \MXTranslator\Events\ScormLaunched as Event;
 
-class UserLoggedoutTest extends UserEventTest {
-    protected static $recipe_name = 'user_loggedout';
-    
+class ScormLaunchedTest extends ModuleViewedTest {
+    protected static $recipe_name = 'scorm_launched';
+
     /**
      * Sets up the tests.
      * @override TestCase

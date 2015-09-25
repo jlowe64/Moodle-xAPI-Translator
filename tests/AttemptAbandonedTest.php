@@ -1,4 +1,4 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \MXTranslator\Events\AttemptAbandoned as Event;
 
 class AttemptAbandonedTest extends AttemptStartedTest {

@@ -13,6 +13,7 @@ class CourseViewed extends Event {
             'course_url' => $opts['course']->url,
             'course_name' => $opts['course']->fullname ?: 'A Moodle course',
             'course_description' => $opts['course']->summary ?: 'A Moodle course',
+            'course_type' => static::$xapi_type.$opts['course']->type,
             'course_ext' => $opts['course'],
             'course_ext_key' => 'http://lrs.learninglocker.net/define/extensions/moodle_course',
         ]);

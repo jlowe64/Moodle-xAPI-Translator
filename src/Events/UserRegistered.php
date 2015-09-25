@@ -1,6 +1,6 @@
 <?php namespace MXTranslator\Events;
 
-class UserLoggedin extends Event {
+class UserRegistered extends Event {
     /**
      * Reads data for an event.
      * @param [String => Mixed] $opts
@@ -9,7 +9,10 @@ class UserLoggedin extends Event {
      */
     public function read(array $opts) {
         return array_merge(parent::read($opts), [
-            'recipe' => 'user_loggedin',
+            'recipe' => 'user_registered',
+            'user_id' => $opts['relateduser']->id,
+            'user_url' => $opts['relateduser']->url,
+            'user_name' => $opts['relateduser']->username,
         ]);
     }
 }

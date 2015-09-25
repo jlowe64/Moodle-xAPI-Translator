@@ -1,16 +1,10 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \PHPUnit_Framework_TestCase as PhpUnitTestCase;
 use \MXTranslator\Events\Event as Event;
 
 abstract class EventTest extends PhpUnitTestCase {
+    protected static $xapi_type = 'http://lrs.learninglocker.net/define/type/moodle/';
     protected static $recipe_name;
-    protected $cfg;
-
-    public function __construct() {
-        $this->cfg = (object) [
-            'wwwroot' => 'http://www.example.com',
-        ];
-    }
 
     /**
      * Sets up the tests.
@@ -32,8 +26,18 @@ abstract class EventTest extends PhpUnitTestCase {
     protected function constructInput() {
         return [
             'user' => $this->constructUser(),
+            'relateduser' => $this->constructUser(),
             'course' => $this->constructCourse(),
+            'app' => $this->constructCourse(),
             'event' => $this->constructEvent('\core\event\course_viewed'),
+            'info' => $this->constructInfo(),
+        ];
+    }
+
+    protected function constructInfo() {
+        return (object) [
+            'https://moodle.org/' => '1.0.0',
+            'https://github.com/LearningLocker/Moodle-Log-Expander' => '1.0.0',
         ];
     }
 
@@ -58,13 +62,15 @@ abstract class EventTest extends PhpUnitTestCase {
             'fullname' => 'Test course_fullname',
             'summary' => 'Test course_summary',
             'lang' => 'en',
+            'type' => 'moodle_course',
         ];
     }
 
     protected function assertOutput($input, $output) {
-        $this->assertUser($input['user'], $output, 'user');
+        $this->assertCourse($input['app'], $output, 'app');
         $this->assertEvent($input['event'], $output);
         $this->assertEquals(static::$recipe_name, $output['recipe']);
+        $this->assertInfo($input['info'], $output['context_info']);
     }
 
     protected function assertUser($input, $output, $type) {
@@ -79,6 +85,7 @@ abstract class EventTest extends PhpUnitTestCase {
         $this->assertEquals($input->url, $output[$type.'_url']);
         $this->assertEquals($input->fullname, $output[$type.'_name']);
         $this->assertEquals($input->summary, $output[$type.'_description']);
+        $this->assertEquals(static::$xapi_type.$input->type, $output[$type.'_type']);
         $this->assertEquals($input, $output[$type.'_ext']);
         $this->assertEquals($ext_key, $output[$type.'_ext_key']);
     }
@@ -89,5 +96,21 @@ abstract class EventTest extends PhpUnitTestCase {
         $this->assertEquals($input, $output['context_ext']);
         $this->assertEquals($ext_key, $output['context_ext_key']);
         $this->assertEquals(date('c', $input['timecreated']), $output['time']);
+    }
+
+    private function assertInfo($input, $output) {
+        $version = str_replace("\n", "", str_replace("\r", "", file_get_contents(__DIR__.'/../VERSION')));
+        $this->assertEquals(
+            $input->{'https://moodle.org/'},
+            $output->{'https://moodle.org/'}
+        );
+        $this->assertEquals(
+            $input->{'https://github.com/LearningLocker/Moodle-Log-Expander'},
+            $output->{'https://github.com/LearningLocker/Moodle-Log-Expander'}
+        );
+        $this->assertEquals(
+            $version,
+            $output->{'https://github.com/LearningLocker/Moodle-xAPI-Translator'}
+        );
     }
 }

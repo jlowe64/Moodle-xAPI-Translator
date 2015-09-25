@@ -1,8 +1,8 @@
 <?php namespace MXTranslator\Tests;
-use \MXTranslator\Events\CourseViewed as Event;
+use \MXTranslator\Events\UserRegistered as Event;
 
-class CourseViewedTest extends UserEventTest {
-    protected static $recipe_name = 'course_viewed';
+class UserRegisteredTest extends EventTest {
+    protected static $recipe_name = 'user_registered';
     
     /**
      * Sets up the tests.
@@ -14,6 +14,6 @@ class CourseViewedTest extends UserEventTest {
 
     protected function assertOutput($input, $output) {
         parent::assertOutput($input, $output);
-        $this->assertCourse($input['course'], $output, 'course');
+        $this->assertUser($input['relateduser'], $output, 'user');
     }
 }

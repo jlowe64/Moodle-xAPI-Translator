@@ -12,7 +12,8 @@ class DiscussionViewed extends ModuleViewed {
             'recipe' => 'discussion_viewed',
             'discussion_url' => $opts['discussion']->url,
             'discussion_name' => $opts['discussion']->name,
-            'discussion_description' => $opts['module']->intro,
+            'discussion_description' => 'A Moodle discussion.',
+            'discussion_type' => static::$xapi_type.$opts['discussion']->type,
             'discussion_ext' => $opts['discussion'],
             'discussion_ext_key' => 'http://lrs.learninglocker.net/define/extensions/moodle_discussion',
         ]);

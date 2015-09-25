@@ -1,4 +1,4 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \MXTranslator\Events\AssignmentGraded as Event;
 
 class AssignmentGradedTest extends ModuleViewedTest {

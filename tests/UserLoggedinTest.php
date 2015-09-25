@@ -1,7 +1,7 @@
-<?php namespace Tests;
+<?php namespace MXTranslator\Tests;
 use \MXTranslator\Events\UserLoggedin as Event;
 
-class UserLoggedinTest extends EventTest {
+class UserLoggedinTest extends UserEventTest {
     protected static $recipe_name = 'user_loggedin';
     
     /**
@@ -10,10 +10,5 @@ class UserLoggedinTest extends EventTest {
      */
     public function setup() {
         $this->event = new Event($this->repo);
-    }
-
-    protected function assertOutput($input, $output) {
-        parent::assertOutput($input, $output);
-        $this->assertCourse($input['course'], $output, 'app');
     }
 }

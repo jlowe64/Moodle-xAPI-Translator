@@ -30,11 +30,7 @@ class DiscussionViewedTest extends ModuleViewedTest {
 
     protected function assertOutput($input, $output) {
         parent::assertOutput($input, $output);
-<<<<<<< HEAD
-        $this->assertDiscussion($input, $output);
-=======
         $this->assertDiscussion($input['discussion'], $output, 'discussion');
->>>>>>> LearningLocker/master
     }
 
     private function assertDiscussion($input, $output, $type) {

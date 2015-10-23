@@ -147,7 +147,7 @@
     "app_url": "http:\/\/localhost\/moodle\/course.php?id=1",
     "app_name": "My Test Site",
     "app_description": "<p>A test site.<\/p>",
-    "app_type": "mod_course",
+    "app_type":"http:\/\/id.tincanapi.com\/activitytype\/site",
     "app_ext": {
         "id": "1",
         "category": "0",

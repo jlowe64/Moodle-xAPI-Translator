@@ -36,7 +36,7 @@
   "app_url":"http:\/\/localhost\/moodle\/course.php?id=1",
   "app_name":"Test Site",
   "app_description":"A Moodle course",
-  "app_type":"http:\/\/lrs.learninglocker.net\/define\/type\/moodle\/course",
+  "app_type":"http:\/\/id.tincanapi.com\/activitytype\/site",
   "app_ext":{
     "id":"1",
     "category":"0",

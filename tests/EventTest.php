@@ -67,7 +67,7 @@ abstract class EventTest extends PhpUnitTestCase {
     }
 
     protected function assertOutput($input, $output) {
-        $this->assertCourse($input['app'], $output, 'app');
+        $this->assertApp($input['app'], $output, 'app');
         $this->assertEvent($input['event'], $output);
         $this->assertEquals(static::$recipe_name, $output['recipe']);
         $this->assertInfo($input['info'], $output['context_info']);
@@ -86,6 +86,18 @@ abstract class EventTest extends PhpUnitTestCase {
         $this->assertEquals($input->fullname, $output[$type.'_name']);
         $this->assertEquals($input->summary, $output[$type.'_description']);
         $this->assertEquals(static::$xapi_type.$input->type, $output[$type.'_type']);
+        $this->assertEquals($input, $output[$type.'_ext']);
+        $this->assertEquals($ext_key, $output[$type.'_ext_key']);
+    }
+    
+    protected function assertApp($input, $output, $type) {
+        $ext_key = 'http://lrs.learninglocker.net/define/extensions/moodle_course';
+        $app_type = 'http://id.tincanapi.com/activitytype/site';
+        $this->assertEquals($input->lang, $output['context_lang']);
+        $this->assertEquals($input->url, $output[$type.'_url']);
+        $this->assertEquals($input->fullname, $output[$type.'_name']);
+        $this->assertEquals($input->summary, $output[$type.'_description']);
+        $this->assertEquals($app_type, $output[$type.'_type']);
         $this->assertEquals($input, $output[$type.'_ext']);
         $this->assertEquals($ext_key, $output[$type.'_ext_key']);
     }
